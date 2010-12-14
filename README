@@ -1,0 +1,20 @@
+DESCRIPTION
+
+wikileaks-mirror.pl is a Perl script, which returns either a working random Wikileaks mirror or a complete list of working mirrors.
+It can write the list to a file  and read from that again to prevent downtimes of the official Wikileaks Website.
+
+OPTIONS:
+
+	-l				print mirrorlist to stdout
+
+	-lo <outfile> 	print mirrorlist to file
+
+	-r				print random mirror from wikileaks website
+
+	-ri <infile>	print random mirror from file 
+	
+
+To redirect your website users to a random Wikileaks mirror, you can use this php code:
+
+	$mirror = shell_exec('/path/to/wikileaks-mirror.pl -r');
+	header ('Loation: ".$mirror);
