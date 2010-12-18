@@ -38,7 +38,7 @@ my @urls;
 my @mirror_urls;
 my @mirror_hosts; # Obsolete / Unused for now
 
-my $wikileaks_mirror_url = "http://213.251.145.96/mirrors.html";
+my $wikileaks_mirror_url = "http://213.251.145.96/Mirrors.html";
 
 my $browser = WWW::Mechanize->new(timeout=>10, onerror => \&fakedie);
 

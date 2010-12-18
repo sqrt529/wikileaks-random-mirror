@@ -1,7 +1,7 @@
 DESCRIPTION
 
 wikileaks-mirror.pl is a Perl script, which returns either a working random Wikileaks mirror or a complete list of working mirrors.
-It can write the list to a file  and read from that again to prevent downtimes of the official Wikileaks Website.
+It can write the list to a file and read from that again to prevent downtimes of the official Wikileaks Website.
 
 OPTIONS:
 
