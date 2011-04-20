@@ -15,7 +15,7 @@
 #
 # --
 # 
-# Version: 1.0.1 - 2010-12-13
+# Version: 1.0.1.1- 2011-04-20
 
 use warnings;
 use strict;
@@ -38,7 +38,7 @@ my @urls;
 my @mirror_urls;
 my @mirror_hosts; # Obsolete / Unused for now
 
-my $wikileaks_mirror_url = "http://213.251.145.96/Mirrors.html";
+my $wikileaks_mirror_url = "http://www.wikileaks.ch/Mirrors.html";
 
 my $browser = WWW::Mechanize->new(timeout=>10, onerror => \&fakedie);
 
