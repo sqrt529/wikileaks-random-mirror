@@ -23,13 +23,13 @@ use WWW::Mechanize;
 use HTML::Parser;
 use Getopt::Std;
 
-our ($opt_l, $opt_r, $opt_h, $opt_o, $opt_i);
+our ($opt_l, $opt_r, $opt_h, $opt_o, $opt_i, $opt_m);
 
 sub usage {
-	die "usage: $0 < -l | -r > | [ -o <outfile> ] | [ -i <infile> ] | [ -h ]\n";
+	die "usage: $0 < -l | -r > [ -m mirror_url ] [ -o <outfile> ] [ -i <infile> ] | [ -h ]\n";
 }
 
-if ( (!getopts("lrho:i:")) or (defined($opt_h)) ) {
+if ( (!getopts("lrho:i:m:")) or (defined($opt_h)) ) {
 	usage();
 }
 
@@ -37,8 +37,9 @@ my $start = 0;
 my @urls;
 my @mirror_urls;
 my @mirror_hosts; # Obsolete / Unused for now
-
 my $wikileaks_mirror_url = "http://www.wikileaks.ch/Mirrors.html";
+
+$wikileaks_mirror_url = $opt_m if (defined($opt_m));
 
 my $browser = WWW::Mechanize->new(timeout=>10, onerror => \&fakedie);
 

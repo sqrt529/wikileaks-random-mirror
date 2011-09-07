@@ -13,8 +13,14 @@ OPTIONS:
 
 	-ri <infile>	print random mirror from file 
 	
+	-m				set your own wikileaks mirror url (like http://www.wikileaks.de/Mirrors.html)
 
 To redirect your website users to a random Wikileaks mirror, you can use this php code:
 
 	$mirror = shell_exec('/path/to/wikileaks-mirror.pl -r');
-	header ('Loation: ".$mirror);
+	header('Loation: '.$mirror);
+
+	Or from mirror file:
+
+	$mirror = shell_exec('/path/to/wikileaks-mirror.pl -ri mirrors.txt');
+	header('Location: '.$mirror);
