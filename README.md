@@ -24,3 +24,5 @@ To redirect your website users to a random Wikileaks mirror, you can use this ph
 
 	$mirror = shell_exec('/path/to/wikileaks-mirror.pl -ri mirrors.txt');
 	header('Location: '.$mirror);
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sqrt529&url=https://github.com/sqrt529/wikileaks-random-mirror&title=wikileaks-random-mirror&language=en_GB&tags=github&category=software)
